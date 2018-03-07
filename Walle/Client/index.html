@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html lang="pt-br" ng-app="Walle">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/default/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="css/main.css" rel="stylesheet" id="login-css" />
+    <link href="css/default/alertify.min.css" rel="stylesheet" id="alerts-css" />
+    <link href="css/default/semantic.min.css" rel="stylesheet" id="semantic-css" />
+    <title>Walle</title>
+</head>
+
+<body ng-controller="IndexController" ng-init="init()">
+    <div class="" ui-view="">
+        <a ui-sref="login">Teste</a>
+       <!-- <div ng-include="'footer.html'"> </div>-->
+    </div>
+
+    <script src="js/default/jquery-3.2.1.min.js"></script>
+    <script src="js/default/bootstrap.min.js"></script>
+    <script src="js/default/alertify.min.js"></script>
+    <script src="js/default/angular.js"></script>
+    <script src="js/default/angular-ui-router.js"></script>
+    <script src="js/core/config.js"></script>
+    <script src="js/core/module.js"></script>
+    <script src="js/core/service.js"></script>
+    <script src="js/core/route.js"></script> 
+    <script src="js/controllers/indexController.js" ></script> 
+    <script src="js/controllers/loginController.js"></script> 
+</body>
+</html>

@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Walle", "Walle\Walle.csproj", "{D0BAB9AB-CBDF-4C6D-BA30-17060715760D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Walle.WebAPI", "Walle.WebAPI\Walle.WebAPI.csproj", "{BC4D9B13-108F-4772-AD61-A450B5F9E72B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Walle.DAL", "Walle.DAL\Walle.DAL.csproj", "{9B482048-0D1A-44FE-8E54-A87F1AFBAA08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D0BAB9AB-CBDF-4C6D-BA30-17060715760D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0BAB9AB-CBDF-4C6D-BA30-17060715760D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0BAB9AB-CBDF-4C6D-BA30-17060715760D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC4D9B13-108F-4772-AD61-A450B5F9E72B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC4D9B13-108F-4772-AD61-A450B5F9E72B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC4D9B13-108F-4772-AD61-A450B5F9E72B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC4D9B13-108F-4772-AD61-A450B5F9E72B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B482048-0D1A-44FE-8E54-A87F1AFBAA08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B482048-0D1A-44FE-8E54-A87F1AFBAA08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B482048-0D1A-44FE-8E54-A87F1AFBAA08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B482048-0D1A-44FE-8E54-A87F1AFBAA08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

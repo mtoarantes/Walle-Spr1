@@ -1,0 +1,28 @@
+﻿<div class="container"  ng-controller="LoginController">
+    <div class="col-md-10 col-md-offset-1 main">
+        <div class="col-md-6 left-side">
+            <h3>Walle</h3>
+            <p>Painel --------------</p>
+            <br>
+        </div><!--col-sm-6-->
+
+        <div class="col-md-6 right-side">
+            <h3></h3>
+            <!--Form with header-->
+            <div class="form">
+                <div class="form-group">
+                    <label for="user">E-mail</label>
+                    <input ng-model="acesso.usuario" type="text" id="form2" class="form-control input-lg">
+                </div>
+                <div class="form-group">
+                    <label for="pw">Senha</label>
+                    <input ng-model="acesso.senha" type="password" id="form4" class="form-control input-lg">
+                </div>
+                <div class="text-xs-center">
+                    <button ng-click="Acessar(acesso)" class="btn btn-info">Acessar</button>
+                </div>
+            </div>
+            <!--/Form with header-->
+        </div><!--col-sm-6-->
+    </div><!--col-sm-8-->
+</div><!--container-->
