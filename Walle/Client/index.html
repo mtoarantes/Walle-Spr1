@@ -3,17 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/default/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link href="css/main.css" rel="stylesheet" id="login-css" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <link href="css/main.css" rel="stylesheet" />
     <link href="css/default/alertify.min.css" rel="stylesheet" id="alerts-css" />
     <link href="css/default/semantic.min.css" rel="stylesheet" id="semantic-css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
     <title>Walle</title>
 </head>
 
 <body ng-controller="IndexController" ng-init="init()">
+    <nav class="navbar navbar-default" style="margin-bottom:0px" ng-if="isLogged">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                    <!--<span class="sr-only">Toggle navigation</span>-->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">Walle</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{sessao}} <span class="glyphicon glyphicon-user"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Perfil</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#" ng-click="Sair()">Sair</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-default sidebar" role="navigation" ng-if="isLogged">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Principal<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+                    <li class=""><a href="#">Dashboard <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-dashboard"></span></a></li>
+                    <li class=""><a href="#">Histórico <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-list-alt"></span></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cadastros <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-edit"></span></a>
+                        <ul class="dropdown-menu forAnimate" role="menu">
+                            <li><a href="#">Cadastro de Clientes</a></li>
+                            <li><a href="#">Cadastro de Usuários</a></li>
+                            <li><a href="#">Cadastro de Usuários Master</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Cadastro de Grupos</a></li>
+                            <li><a href="#">Cadastro de Grupos</a></li>
+                            <li><a href="#">Cadastro de Perfis</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Cadastro de Tipos de Programas</a></li>
+                            <li><a href="#">Cadastro de Categorias</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Categorização<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span></a></li>
+                    <li><a href="#">Licenças<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-credit-card"></span></a></li>
+                    <li><a href="#">Alocação<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-indent-left"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="" ui-view="">
-        <a ui-sref="login">Teste</a>
-       <!-- <div ng-include="'footer.html'"> </div>-->
+        <div ng-include="'footer.html'"> </div>
     </div>
 
     <script src="js/default/jquery-3.2.1.min.js"></script>
@@ -21,11 +86,12 @@
     <script src="js/default/alertify.min.js"></script>
     <script src="js/default/angular.js"></script>
     <script src="js/default/angular-ui-router.js"></script>
+    <script src="js/default/ngStorage.min.js"></script>
     <script src="js/core/config.js"></script>
     <script src="js/core/module.js"></script>
     <script src="js/core/service.js"></script>
-    <script src="js/core/route.js"></script> 
-    <script src="js/controllers/indexController.js" ></script> 
-    <script src="js/controllers/loginController.js"></script> 
+    <script src="js/core/route.js"></script>
+    <script src="js/controllers/indexController.js"></script>
+    <script src="js/controllers/loginController.js"></script>
 </body>
 </html>

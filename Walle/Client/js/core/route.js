@@ -1,7 +1,7 @@
 ﻿WebApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-
+    $locationProvider.hashPrefix('');
     $urlRouterProvider.otherwise('/');
-    
+
     var login = {
         name: 'login',
         url: '/login',

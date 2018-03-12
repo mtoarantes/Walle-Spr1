@@ -1,4 +1,4 @@
-﻿WebApp.controller('IndexController', ['$scope', '$state', function ($scope, $state) {
+﻿WebApp.controller('IndexController', ['$rootScope', '$scope', '$state', '$location', function ($rootScope, $scope, $state, $location) {
     var sessao = null;
 
     $scope.init = function () {
@@ -7,10 +7,17 @@
 
     $scope.ValidaSessao = function () {
         if (sessao == null) {
-            $state.go('login');
+            $location.path('/login');
+            $rootScope.isLogged = false;
         }
         else {
             console.log("error");
         };
+
+        $scope.Sair = function () {
+            $rootScope.sessao = null;
+            $rootScope.isLogged = false;
+            $location.path('/login')
+        }
     };
 }])

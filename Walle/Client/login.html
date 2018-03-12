@@ -1,28 +1,34 @@
-﻿<div class="container"  ng-controller="LoginController">
-    <div class="col-md-10 col-md-offset-1 main">
-        <div class="col-md-6 left-side">
-            <h3>Walle</h3>
-            <p>Painel --------------</p>
-            <br>
-        </div><!--col-sm-6-->
+﻿<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="login" ng-controller="LoginController" ng-if="!isLogged">
+    <div class="container">
+        <div class="col-lg-12 login-box">
 
-        <div class="col-md-6 right-side">
-            <h3></h3>
-            <!--Form with header-->
-            <div class="form">
-                <div class="form-group">
-                    <label for="user">E-mail</label>
-                    <input ng-model="acesso.usuario" type="text" id="form2" class="form-control input-lg">
-                </div>
-                <div class="form-group">
-                    <label for="pw">Senha</label>
-                    <input ng-model="acesso.senha" type="password" id="form4" class="form-control input-lg">
-                </div>
-                <div class="text-xs-center">
-                    <button ng-click="Acessar(acesso)" class="btn btn-info">Acessar</button>
-                </div>
-            </div>
-            <!--/Form with header-->
-        </div><!--col-sm-6-->
-    </div><!--col-sm-8-->
-</div><!--container-->
+            <div class="col-lg-6 left-box"></div>
+
+            <div class="col-lg-6 right-box">
+                <h1>LOGIN</h1>
+
+                <form role="form" class="form">
+
+                    <div class="form-group">
+                        <label for="username"> E-mail / Usuário </label>
+                        <input type="text" ng-model="acesso.Des_Email_Login" id="username" class="form-control">
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password"> Senha </label>
+                        <input type="password" ng-model="acesso.Des_Password" id="password" class="form-control">
+
+                    </div>
+
+                    <div class="login-button">
+                        <button class="btn btn-default" ng-click="Acessar(acesso)">Login</button>
+                    </div>
+
+                </form>
+            </div>  <!-- right-box -->
+
+        </div> <!--col-lg-8-->
+    </div>
+</div>

@@ -95,10 +95,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Client\css\default\alertify.min.css" />
+    <Content Include="Client\css\default\bootstrap.css" />
     <Content Include="Client\js\controllers\indexController.js" />
     <Content Include="Client\js\controllers\loginController.js" />
     <Content Include="Client\js\default\alertify.min.js" />
     <Content Include="Client\css\default\semantic.min.css" />
+    <Content Include="Client\js\default\ngStorage.min.js" />
     <Content Include="Client\views\tableLogin.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">

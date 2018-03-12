@@ -1,20 +1,15 @@
-﻿WebApp.controller("LoginController", ["$scope", "$rootScope", "$state", "LoginService", function ($scope, $rootScope, $state, LoginService) {
-
-    $scope.retornoBanco = {
-        usuario: 'marco.tulio',
-        senha: 'walle2018'
-    };
+﻿WebApp.controller("LoginController", ["$scope", "$rootScope", "$location", "LoginService", function ($scope, $rootScope, $location, LoginService) {
 
     $scope.acesso = {};
-
     $scope.Acessar = function (acesso) {
-        if (acesso.usuario == retornoBanco.usuario && acesso.senha == retornoBanco.senha) {
-            MsgSucesso("Usuário Autorizado!");
-            $state.go('/');
+        LoginService.getUsuarioAdmin(acesso, function (data) {
+            sessionStorage.isLogged = true;
+            sessionStorage.Username = data.Des_Nome_Completo;
+            $rootScope.sessao = sessionStorage.Username;
+            $rootScope.isLogged = sessionStorage.isLogged;
+            $location.path('/');
         }
-        else {
-            MsgFalha("Usuário negado!");
-        }
+        );
     }
 
     function MsgSucesso(msg) {

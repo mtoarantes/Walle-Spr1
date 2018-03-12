@@ -1,4 +1,4 @@
 var config = {
-    server: 'http://localhost:62524/',
+    server: 'http://localhost:50835/',
     localPath: '/'
 };
