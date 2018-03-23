@@ -1,6 +1,21 @@
 ﻿WebApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $locationProvider.hashPrefix('');
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('');
+
+
+    //var uiTabs = {
+    //    name: 'tabs',
+    //    url: '/cadastro/cadastro-de-clientes',
+    //    templateUrl: 'tabs'
+    //}
+
+
+    var clientes = {
+        name: 'cadastro-clientes',
+        url: '/cadastro/cadastro-de-clientes',
+        templateUrl: '/views/cliente/clientes.html'
+    }
+
 
     var login = {
         name: 'login',
@@ -16,6 +31,6 @@
 
     $stateProvider.state(login);
     $stateProvider.state(footer);
-    
+    $stateProvider.state(clientes);
 });
 

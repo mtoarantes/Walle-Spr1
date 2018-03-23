@@ -1,0 +1,11 @@
+﻿<div class="row" id="main" ng-controller="ClienteController">
+    <uib-tabset active="active">
+        <uib-tab index="$index + 1" ng-repeat="tab in tabs">
+            <uib-tab-heading>
+                <i class="{{tab.icon}}"></i>  {{tab.title}}
+            </uib-tab-heading>
+               <div ng-include="tab.tabContent"></div> 
+        </uib-tab>
+    </uib-tabset>
+
+</div>

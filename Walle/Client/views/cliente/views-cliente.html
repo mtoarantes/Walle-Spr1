@@ -1,0 +1,30 @@
+﻿<link rel="stylesheet" href="/Client/css/default/bootstrap.css" />
+<div class="container-fluid" ng-controller="ClienteController" ng-init="init()">
+    <br />
+    <div class="w3-card-2">
+        Total de clientes: {{listClientes.length}}
+    </div>
+    <br />
+    <table ng-table="ngParametros" class="tablesaw table-striped table-hover table-bordered table" show-filter="true">
+        <tr class="thead-dark" ng-repeat="cliente in $data">
+            <td title="'Cliente'" sortable="'Cod_Cliente'">
+                {{cliente.Cod_Cliente}}
+            </td>
+            <td title="'Nome'" sortable="'Des_Nome'">
+                {{cliente.Des_Nome}}
+            </td>
+            <td title="'Razão Social'" sortable="'Des_Razao_Social'">
+                {{cliente.Des_Razao_Social}}
+            </td>
+            <td title="'CNPJ/CPF'" sortable="'Des_CNPJ'">
+                {{cliente.Des_CNPJ}}
+            </td>
+            <td title="'Dt. Cadastro'" sortable="'Date_Data_Cadastro'">
+                {{cliente.Date_Data_Cadastro}}
+            </td>
+            <td title="'Ativo'" sortable="'Bol_Ativo'">
+                {{cliente.Bol_Ativo}}
+            </td>
+        </tr>
+    </table>
+</div>

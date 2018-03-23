@@ -2,7 +2,9 @@
     var sessao = null;
 
     $scope.init = function () {
-        $scope.ValidaSessao(sessao);
+        $rootScope.isLogged = true;
+        $rootScope.sessao = "lala";
+        //$scope.ValidaSessao(sessao);
     };
 
     $scope.ValidaSessao = function () {

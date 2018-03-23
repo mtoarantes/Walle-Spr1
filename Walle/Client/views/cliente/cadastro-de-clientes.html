@@ -1,0 +1,137 @@
+﻿<div class="w3-card-4">
+    <div class="w3-container" ng-if="$index=1">
+        <h6 style="color:#267480; font-weight:bold">Informações do Cliente</h6>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Razão Social</label>
+                    <input type="text" class="form-control input-sm" ng-model="cliente.Des_Razao_Social" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Nome Fantasia</label>
+                    <input type="text" class="form-control input-sm" ng-model="cliente.Des_Nome" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Matriz</label>
+                    <select class="form-control input-sm" id="inlineFormCustomSelect" ng-model="cliente.Num_Matriz">
+                        <option selected="selected">Escolha</option>
+                        <option value="1000">Cliente 1</option>
+                        <option value="1000">Cliente 2</option>
+                        <option value="1000">Cliente 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-labe">CNPJ/CPF</label>
+                    <input type="text" class="form-control input-sm" ui-br-cpfcnpj-mask ng-model="cliente.Des_CNPJ" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-labe">Insc. Estadual </label>
+                    <input type="text" class="form-control input-sm" ng-model="cliente.Des_Inscricao_Estadual" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="form-label"> Status</label>
+                </div>
+                <div class="form-group">
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" ng-value="true" ng-model="cliente.Bol_Ativo">Ativo
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" ng-value="false" ng-model="cliente.Bol_Ativo">Inativo
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Chave de Criptografia</label>
+                    <input type="text" class="form-control input-sm" ng-model="cliente.Des_Chave_Criptografia" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Serial de Ativação</label>
+                    <input type="text" class="form-control input-sm" ng-model="cliente.Des_Product_Key" />
+                </div>
+            </div>
+        </div>
+
+        <h5 style="color:#267480; font-weight:bold">Endereço</h5>
+        <hr>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label class="form-label">CEP</label>
+                    <i class="fa fa-search"> </i><input type="text" class="form-control input-sm" ng-model="cliente.Des_Cep" ui-br-cep-mask ng-blur="lostFocus()" required />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Rua</label>
+                    <input type="text" class="form-control input-sm" ng-model="cliente.Des_Endereco" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Número</label>
+                    <input type="text" class="form-control input-sm" ng-model="cliente.Des_Numero" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Complemento</label>
+                    <input type="text" class="form-control input-sm" ng-model="cliente.Des_Complemento" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Bairro/Distrito</label>
+                    <input type="text" class="form-control input-sm" ng-model="cliente.Des_Bairro" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Cidade</label>
+                    <input type="text" class="form-control input-sm" ng-model="cliente.Des_Cidade" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Estado</label>
+                    <input type="text" class="form-control input-sm" ng-model="cliente.Des_Estado" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <button class="btn btn-success" ng-click="cadastrar(cliente)"><i class="fa fa-floppy-o"> Salvar </i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /.row -->
